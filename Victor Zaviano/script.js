@@ -1,6 +1,6 @@
 (function(){
 
-    var quotes = [
+    const quotes = [
       "Nobody You than the You that You are.",
       "The hustle and the work births greatness.. keep pushing.",
       "You smart, you loyal, you a genius.",
@@ -11,7 +11,7 @@
       "Learning is cool, but knowing is better, and I know the key to success."
       ];
   
-    var images = [
+    const images = [
       "1.jpg",
       "2.jpg",
       "3.jpg",
@@ -20,13 +20,13 @@
       "6.jpg"
     ];
   
-    function chooseOne(arr) {
+     chooseOne = arr => {
       return arr[Math.floor(Math.random() * arr.length)];
     }
   
     window.onload = function() {
-      var randomImage = chooseOne(images);
-      var randomQuote = chooseOne(quotes);
+      let  randomImage = chooseOne(images);
+      let randomQuote = chooseOne(quotes);
   
       document.getElementById('background-image').style.backgroundImage = 'url("images/'+ randomImage +'")';
       document.getElementById('quote').innerHTML = randomQuote;
